@@ -27,7 +27,7 @@
 import { useEffect } from 'react'
 import { useSocketContext } from './SocketContext'
 import useConversation from '../components/zustand/useConversation'
-
+import sound from "../assets/sound.mp3"
 function useGetSocketMessage() {
   const { socket } = useSocketContext();
   const { setMessage } = useConversation();
@@ -36,6 +36,11 @@ function useGetSocketMessage() {
     if (!socket) return;
 
     socket.on("newMessage", (newMessage) => {
+
+
+       const notification = new Audio(sound);
+      notification.play();
+
       console.log("Socket message received:", newMessage);
       setMessage((prev) => [...prev, newMessage]);
     });

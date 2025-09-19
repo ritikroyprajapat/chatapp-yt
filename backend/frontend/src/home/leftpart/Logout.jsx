@@ -22,7 +22,7 @@ function Logout() {
   return (
     <>
     
-   
+    <div className='h-[10vh] bg-slate-800'>
     <button className="btn btn-circle btn-outline mx-4 my-5" onClick={handleLogout}>
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ function Logout() {
        />
   </svg>
 </button>
-    
+    </div>
 
     </>
   )

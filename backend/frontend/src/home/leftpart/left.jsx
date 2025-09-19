@@ -4,7 +4,7 @@ import Users from './Users'
 import Logout from './Logout'
 function left() {
   return (
-    <div className=' w-[30%]  bg-black'>
+    <div className=' w-full  bg-black text-gray-300'>
       <Search/>
       <div className="flex-1 overflow-y-auto"
 
